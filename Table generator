@@ -1,0 +1,23 @@
+def create_multiplication_table(n):
+    print(f"Таблица умножения для {n}:")
+    for i in range(1, 11):
+        print(f"{n} x {i} = {n * i}")
+
+def create_addition_table(n):
+    print(f"Таблица сложения для {n}:")
+    for i in range(1, 11):
+        print(f"{n} + {i} = {n + i}")
+
+def main():
+    choice = input("Введите 'm' для таблицы умножения или 'a' для таблицы сложения: ").strip().lower()
+    number = int(input("Введите число для создания таблицы: "))
+
+    if choice == 'm':
+        create_multiplication_table(number)
+    elif choice == 'a':
+        create_addition_table(number)
+    else:
+        print("Неверный выбор. Пожалуйста, попробуйте снова.")
+
+if __name__ == "__main__":
+    main()
